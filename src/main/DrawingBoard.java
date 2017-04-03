@@ -108,11 +108,11 @@ public class DrawingBoard extends JPanel {
 			for(int i = gObjects.size()-1; i >= 0; i--){
 				GObject go = gObjects.get(i);
 				if(go.pointerHit(e.getX(), e.getY())){
+					deselectAll();
 					go.selected();
 					target = go;
 					x1 = e.getX();
 					y1 = e.getY();
-		
 					break;
 				}else{
 					deselectAll();
